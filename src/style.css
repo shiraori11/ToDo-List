@@ -1,0 +1,13 @@
+.website-layout {
+  display: flex;
+}
+
+.side-bar {
+  display: grid;
+  gap: 8px;
+}
+
+.create-task-form {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,10 +1,12 @@
 import "./style.css";
-import domManipulator from "./scripts/domManipulation.js";
-import task from "./model/taskModel.js";
-import createTask from "./scripts/createTask.js";
+import domManagement from "./scripts/domManagement.js";
+import tasksManagement from "./scripts/tasks.js";
 
-domManipulator.test();
+domManagement.addCreateTaskButtonFunc(tasksManagement.createTask);
 
-const testTask = new task("title", "desc", "due date", "priority");
-testTask.test();
-domManipulator.addCreateTaskButtonFunc(createTask);
+
+
+
+
+
+
