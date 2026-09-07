@@ -1,7 +1,8 @@
 import path from "node:path";
-import { fileUrlToPath } from "node:url";
+import { fileURLToPath } from "node:url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-const __filename = fileUrlToPath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
@@ -11,26 +12,26 @@ export default {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true,
+    clean: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-    }),
+    })
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.html$/i,
-        use: ["html-loader"],
+        use: ["html-loader"]
       },
       {
         test: /\.(png|svg|jpg|jpeg|git)$/i,
-        type: "asset/resource",
+        type: "asset/resource"
       }
     ]
   }
