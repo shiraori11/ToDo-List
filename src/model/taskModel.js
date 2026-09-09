@@ -5,8 +5,4 @@ export default class task{
     this.dueDate = dueDate;
     this.priority = priority;
   }
-
-  test() {
-    console.log(this.title, this.description, this.dueDate, this.priority);
-  }
 }
