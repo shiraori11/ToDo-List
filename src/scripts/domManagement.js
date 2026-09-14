@@ -4,10 +4,15 @@ const taskTitle = document.querySelector("#title");
 const taskDescription = document.querySelector("#description");
 const taskDueDate = document.querySelector("#duedate");
 const taskPriority = document.querySelector("#priority");
+const taskForm = document.getElementById("create-task-form");
 
 function addCreateTaskButtonFunc(func) {
   createTaskButton.addEventListener("click", func);
 };
+
+function resetTaskDataInput() {
+  taskForm.reset();
+}
 
 function getTaskData() {
   const title = taskTitle.value;
@@ -18,8 +23,14 @@ function getTaskData() {
   return [title, description, dueDate, priority];
 };
 
+function addTaskItems(task) {
+  taskListContent.appendChild(task);
+}
+
 export default {
   addCreateTaskButtonFunc,
-  getTaskData
+  getTaskData,
+  resetTaskDataInput,
+  addTaskItems
 };
 

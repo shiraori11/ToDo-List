@@ -1,13 +1,28 @@
 .website-layout {
   display: flex;
+  column-gap: 20px;
 }
 
 .side-bar {
   display: grid;
   gap: 8px;
+  height: 100vh;
 }
 
-.create-task-form {
+.contents {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#create-task-form {
   display: flex;
   flex-direction: column;
+}
+
+.task-card {
+  padding: 1px;
+  background-color: lightgrey;
+  width: 350px;
 }
