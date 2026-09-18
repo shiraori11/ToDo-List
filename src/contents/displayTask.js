@@ -7,8 +7,15 @@ export default function displayTask(Task) {
     <p>${Task.description}</p>
     <p>${Task.dueDate}</p>
     <p>${Task.priority}</p>
-  `
+  `;
+
+  const testButton = document.createElement("button");
+  testButton.textContent = "Finish";
+  testButton.addEventListener("click", () => Task.taskCompleted())
+  
+  taskDiv.appendChild(testButton);
 
   return taskDiv;
-}
+};
+
 

@@ -1,11 +1,8 @@
-import task from "../model/taskModel.js";
-
 const taskList = [];
 
-function createTask(title, desc, dueDate, priority) {
-  const testTask = new task(title, desc, dueDate, priority);
-  console.log(testTask);
-  taskList.push(testTask);
+function createTask(Task) {
+  console.log(Task);
+  taskList.push(Task);
 };
 
 function getTasks() {

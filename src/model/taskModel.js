@@ -4,5 +4,11 @@ export default class task{
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
+    this.completed = false;
+  }
+
+  taskCompleted() {
+    this.completed = true;
+    console.log("funciton works");
   }
 }
