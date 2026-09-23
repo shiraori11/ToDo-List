@@ -5,11 +5,18 @@ function createTask(Task) {
   taskList.push(Task);
 };
 
+function removeTask(Task) {
+  taskList.pop(Task);
+}
+
 function getTasks() {
+  console.log(taskList);
   return taskList;
 }
 
 export default {
   createTask,
-  getTasks
+  getTasks,
+  removeTask
 }
+

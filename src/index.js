@@ -2,7 +2,30 @@ import "./style.css";
 import taskModel from "./model/taskModel.js";
 import domManagement from "./scripts/domManagement.js";
 import tasksManagement from "./scripts/tasks.js";
-import displayTask from "./contents/displayTask.js";
+
+function displayTask(Task) {
+  const taskDiv = document.createElement("div");
+  taskDiv.classList = "task-card";
+
+  taskDiv.innerHTML = `
+    <p>${Task.title}</p>
+    <p>${Task.description}</p>
+    <p>${Task.dueDate}</p>
+    <p>${Task.priority}</p>
+  `;
+
+  const testButton = document.createElement("button");
+  testButton.textContent = "Finish";
+  testButton.addEventListener("click", () => testDelete(Task));
+  
+  taskDiv.appendChild(testButton);
+
+  return taskDiv;
+};
+
+function testDelete(Task){
+  tasksManagement.removeTask(Task);
+};
 
 function createTask() {
   const [title, desc, dueDate, priority] = domManagement.getTaskData();
@@ -20,6 +43,7 @@ function displayCurrentTask() {
 
 function taskButtonFunc() {
   createTask();
+  domManagement.resetTaskItems();
   displayCurrentTask();
   domManagement.resetTaskDataInput();
 }

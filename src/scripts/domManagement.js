@@ -27,10 +27,15 @@ function addTaskItems(task) {
   taskListContent.appendChild(task);
 }
 
+function resetTaskItems() {
+  taskListContent.innerHTML = "";
+}
+
 export default {
   addCreateTaskButtonFunc,
   getTaskData,
   resetTaskDataInput,
-  addTaskItems
+  addTaskItems,
+  resetTaskItems
 };
 
