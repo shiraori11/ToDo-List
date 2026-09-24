@@ -25,6 +25,7 @@ function displayTask(Task) {
 
 function testDelete(Task){
   tasksManagement.removeTask(Task);
+  displayCurrentTask();
 };
 
 function createTask() {
@@ -34,6 +35,7 @@ function createTask() {
 };
 
 function displayCurrentTask() {
+  domManagement.resetTaskItems();
   const currentTasks = tasksManagement.getTasks();
 
   for (const task of currentTasks) {
@@ -43,7 +45,6 @@ function displayCurrentTask() {
 
 function taskButtonFunc() {
   createTask();
-  domManagement.resetTaskItems();
   displayCurrentTask();
   domManagement.resetTaskDataInput();
 }

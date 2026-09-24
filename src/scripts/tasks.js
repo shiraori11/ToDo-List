@@ -1,4 +1,4 @@
-const taskList = [];
+var taskList = [];
 
 function createTask(Task) {
   console.log(Task);
@@ -6,7 +6,7 @@ function createTask(Task) {
 };
 
 function removeTask(Task) {
-  taskList.pop(Task);
+  taskList = taskList.filter((task) => task !== Task);
 }
 
 function getTasks() {
@@ -19,4 +19,3 @@ export default {
   getTasks,
   removeTask
 }
-
