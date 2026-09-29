@@ -50,12 +50,3 @@ function taskButtonFunc() {
 }
 
 domManagement.addCreateTaskButtonFunc(taskButtonFunc);
-
-
-
-
-
-
-
-
-
