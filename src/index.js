@@ -1,5 +1,6 @@
 import "./style.css";
 import taskModel from "./model/taskModel.js";
+import projectModel from "./model/projectModel.js";
 import domManagement from "./scripts/domManagement.js";
 import tasksManagement from "./scripts/tasks.js";
 
@@ -23,6 +24,14 @@ function displayTask(Task) {
   return taskDiv;
 };
 
+function displayProject(Project) {
+  const projectDiv = document.createElement("div");
+
+  projectDiv.innerHTML = `
+    <p>${Project.name}</p>
+  `;
+}
+
 function testDelete(Task){
   tasksManagement.removeTask(Task);
   displayCurrentTask();
@@ -33,6 +42,12 @@ function createTask() {
   const newTask = new taskModel(title, desc, dueDate, priority);
   tasksManagement.createTask(newTask);
 };
+
+function createProject() {
+  const projectName = domManagement.getProjectData();
+  const newProject = new projectModel(projectName);
+  
+}
 
 function displayCurrentTask() {
   domManagement.resetTaskItems();
