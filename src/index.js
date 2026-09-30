@@ -1,8 +1,8 @@
 import "./style.css";
 import taskModel from "./model/taskModel.js";
-import projectModel from "./model/projectModel.js";
-import domManagement from "./scripts/domManagement.js";
-import tasksManagement from "./scripts/tasks.js";
+impore projectModel from "./model/projectModel.js";
+import domManagement from "./controller/domManagement.js";
+import tasksManagement from "./controller/tasks.js";
 
 function displayTask(Task) {
   const taskDiv = document.createElement("div");
