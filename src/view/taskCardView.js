@@ -11,9 +11,9 @@ export default function displayTask(Task) {
 
   const testButton = document.createElement("button");
   testButton.textContent = "Finish";
-  testButton.addEventListener("click", () => testDelete(Task));
+  // testButton.addEventListener("click", () => testDelete(Task));
   
-  taskDiv.appendChild(testButton);
+  // taskDiv.appendChild(testButton);
 
   return taskDiv;
 }
