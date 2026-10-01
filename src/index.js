@@ -1,10 +1,6 @@
 import "./style.css";
 import taskModel from "./model/taskModel.js";
-// import projectModel from "./model/projectModel.js";
-import domHandler from "./handler/domHandler.js";
-import taskHandler from "./handler/taskHandler.js";
 import taskController from "./controller/taskController.js";
-import taskCardView from "./view/taskCardView.js";
 
 // function displayProject(Project) {
 //   const projectDiv = document.createElement("div");
@@ -24,4 +20,4 @@ import taskCardView from "./view/taskCardView.js";
 //   const projectName = domManagement.getProjectData();
 //   const newProject = new projectModel(projectName);
 // }
-domHandler.addCreateTaskButtonFunc(() => taskController.taskButtonFunc(taskModel, taskHandler, domHandler, taskCardView));
+taskController.addButtonFunc();

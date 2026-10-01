@@ -14,6 +14,5 @@ export default function displayTask(Task) {
   // testButton.addEventListener("click", () => testDelete(Task));
   
   // taskDiv.appendChild(testButton);
-
   return taskDiv;
 }

@@ -1,10 +1,15 @@
-function createTask(domHandler, taskModel, taskHandler) {
+import domHandler from "../handler/domTaskHandler.js";
+import taskHandler from "../handler/taskHandler.js";
+import taskCardView from "../view/taskCardView.js";
+import taskModel from "../model/taskModel.js";
+
+function createTask() {
   const [title, desc, dueDate, priority] = domHandler.getTaskData();
   const newTask = new taskModel(title, desc, dueDate, priority);
   taskHandler.createTask(newTask);
 };
 
-function displayCurrentTask(domHandler, taskHandler, taskCardView) {
+function displayCurrentTask() {
   domHandler.resetTaskItems();
   const currentTasks = taskHandler.getTasks();
 
@@ -13,12 +18,17 @@ function displayCurrentTask(domHandler, taskHandler, taskCardView) {
   }
 };
 
-function taskButtonFunc(taskModel, taskHandler, domHandler, taskCardView) {
-  createTask(domHandler, taskModel, taskHandler);
-  displayCurrentTask(domHandler, taskHandler, taskCardView);
+function taskButtonFunc() {
+  createTask();
+  displayCurrentTask();
   domHandler.resetTaskDataInput();
-}
+};
+
+function addButtonFunc() {
+  domHandler.addCreateTaskButtonFunc(taskButtonFunc);
+};
 
 export default {
-  taskButtonFunc
-}
+  addButtonFunc,
+  displayCurrentTask
+};
