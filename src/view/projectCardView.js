@@ -5,4 +5,6 @@ export default function projectCard(Project) {
   projectTitle.textContent = Project.title;
 
   projectCardDiv.append(projectTitle);
+
+  return projectCardDiv;
 };

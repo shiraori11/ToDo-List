@@ -5,6 +5,5 @@ export default class Project {
   }
 
   addTaskToProject(Task) {
-    
   }
 }

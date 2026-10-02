@@ -10,6 +10,7 @@ function createProject() {
 };
 
 function displayProject() {
+  domProjectHandler.resetProjectList();
   const projectList = projectHandler.getProject();
 
   for (const project of projectList) {
@@ -20,10 +21,11 @@ function displayProject() {
 function projectSubmitFunc() {
   createProject();
   displayProject();
+  domProjectHandler.resetProjectForm();
 }
 
 function addProjectSubmitFunc() {
-  domProjectHandler.addProjectSubmitFunc();
+  domProjectHandler.addCreateProjectButtonFunc(projectSubmitFunc);
 }
 
 export default {

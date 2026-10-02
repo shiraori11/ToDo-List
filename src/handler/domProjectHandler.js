@@ -19,6 +19,10 @@ function getProjectData() {
   return projectName.value;
 };
 
+function resetProjectList() {
+  projectListContent.innerHTML = "";
+}
+
 function resetProjectForm() {
   projectForm.reset();
 };
@@ -28,5 +32,6 @@ export default {
   addProjectCard,
   getProjectData,
   toggleProjectListVisibility,
-  resetProjectForm
+  resetProjectForm,
+  resetProjectList
 };

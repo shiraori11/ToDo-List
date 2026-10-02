@@ -1,5 +1,6 @@
 import "./style.css";
 import taskController from "./controller/taskController.js";
+import projectController from "./controller/projectController.js";
 
 // function displayProject(Project) {
 //   const projectDiv = document.createElement("div");
@@ -14,3 +15,4 @@ import taskController from "./controller/taskController.js";
 //   displayCurrentTask();
 // };
 taskController.addButtonFunc();
+projectController.addProjectSubmitFunc();
