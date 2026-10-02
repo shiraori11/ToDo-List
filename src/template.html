@@ -9,6 +9,7 @@
   <div class="website-layout">
     <nav class="side-bar">
       <h1>2DO List</h1>
+      
       <form onsubmit="return false" id="create-task-form">
         <input type="text" placeholder="title" name="todo title" id="title" class="taskInput">
         <input type="text" placeholder="description" name="description" id="description" class="taskInput">
@@ -16,10 +17,12 @@
         <input type="text" placeholder="priority" name="priority" id="priority" class="taskInput">
         <input type="submit" value="create task" id="createTaskButton">
       </form>     
+      
       <form onsubmit="return false" id="create-project-form">
         <input type="text" placeholder="Project" name="project-name">
         <input type="submit" value="create project" id="createProjectButton">
       </form>
+      
       <button>Projects</button>
     </nav>
     <div class="contents" id="task-list"></div>

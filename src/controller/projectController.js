@@ -17,7 +17,15 @@ function displayProject() {
   }
 }
 
+function projectSubmitFunc() {
+  createProject();
+  displayProject();
+}
+
+function addProjectSubmitFunc() {
+  domProjectHandler.addProjectSubmitFunc();
+}
+
 export default {
-  createProject,
-  displayProject
+  addProjectSubmitFunc
 }

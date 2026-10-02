@@ -1,9 +1,11 @@
+const projectForm = document.getElementById("create-project-form");
 const projectListContent = document.querySelector("#project-list");
 const projectName = document.getElementById("project-name");
+const projectSubmitButton = document.getElementById("createProjectButton");
 
 function addCreateProjectButtonFunc(func) {
-  createProjectButton.addEventListener("click", func);
-}
+  projectSubmitButton.addEventListener("click", func);
+};
 
 function addProjectCard(projectCard) {
   projectListContent.appendChild(projectCard);
@@ -17,9 +19,14 @@ function getProjectData() {
   return projectName.value;
 };
 
+function resetProjectForm() {
+  projectForm.reset();
+};
+
 export default {
   addCreateProjectButtonFunc,
   addProjectCard,
   getProjectData,
   toggleProjectListVisibility,
+  resetProjectForm
 };
