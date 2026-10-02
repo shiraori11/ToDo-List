@@ -1,7 +1,6 @@
 export default class Project {
-  constructor(name, project) {
-    this.name = name;
-    this.project = project
+  constructor(title) {
+    this.title = title;
     this.listOfProject = [];
   }
 

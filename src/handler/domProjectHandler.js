@@ -5,29 +5,21 @@ function addCreateProjectButtonFunc(func) {
   createProjectButton.addEventListener("click", func);
 }
 
-function toggleProjectListVisibility() {
-  projectListContent.hidden = !projectListContent.hidden;
-}
-
-function resetTaskDataInput() {
-  taskForm.reset();
-}
-
-function getProjectData() {
-  const name = projectName.value;
-
-  return name;
+function addProjectCard(projectCard) {
+  projectListContent.appendChild(projectCard);
 };
 
+function toggleProjectListVisibility() {
+  projectListContent.hidden = !projectListContent.hidden;
+};
+
+function getProjectData() {
+  return projectName.value;
+};
 
 export default {
-  addCreateTaskButtonFunc,
   addCreateProjectButtonFunc,
-  getTaskData,
+  addProjectCard,
   getProjectData,
-  resetTaskDataInput,
-  addTaskItems,
-  resetTaskItems,
-  toggleTaskListVisibility,
   toggleProjectListVisibility,
 };

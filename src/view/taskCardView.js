@@ -1,4 +1,4 @@
-export default function displayTask(Task) {
+export default function taskCard(Task) {
   const taskDiv = document.createElement("div");
   taskDiv.classList = "task-card";
 

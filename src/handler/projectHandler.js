@@ -2,7 +2,7 @@ var projectList = [];
 
 function addProject(Project) {
   for (const project of projectList) {
-    if (Project.name == project.name) {
+    if (Project.title == project.title) {
        return false;
     }
   }
@@ -10,11 +10,10 @@ function addProject(Project) {
 };
 
 function removeProject(Project) {
-  projectList = projectList.filter((project) => project.name !== Project.name);
+  projectList = projectList.filter((project) => project.title !== Project.title);
 }
 
 function getProject() {
-  console.log(projectList);
   return projectList;
 }
 

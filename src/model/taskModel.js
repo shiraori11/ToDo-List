@@ -9,10 +9,5 @@ export default class task{
 
   taskCompleted() {
     this.completed = true;
-    console.log(this);
-  }
-
-  deleteTask() {
-    delete this;
   }
 }

@@ -1,5 +1,4 @@
 const createTaskButton = document.querySelector("#createTaskButton");
-const createProjectButton = document.querySelector("#createProjectButton");
 const taskTitle = document.querySelector("#title");
 const taskDescription = document.querySelector("#description");
 const taskDueDate = document.querySelector("#duedate");
@@ -11,6 +10,10 @@ function addCreateTaskButtonFunc(func) {
   createTaskButton.addEventListener("click", func);
 };
 
+function resetTaskDataInput() {
+  taskForm.reset();
+}
+
 function getTaskData() {
   const title = taskTitle.value;
   const description = taskDescription.value;
@@ -20,8 +23,8 @@ function getTaskData() {
   return [title, description, dueDate, priority];
 };
 
-function addTaskItems(task) {
-  taskListContent.appendChild(task);
+function addTaskCard(taskCard) {
+  taskListContent.appendChild(taskCard);
 };
 
 function resetTaskItems() {
@@ -36,7 +39,7 @@ export default {
   addCreateTaskButtonFunc,
   getTaskData,
   resetTaskDataInput,
-  addTaskItems,
+  addTaskCard,
   resetTaskItems,
   toggleTaskListVisibility,
 };

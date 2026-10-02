@@ -1,5 +1,4 @@
 import "./style.css";
-import taskModel from "./model/taskModel.js";
 import taskController from "./controller/taskController.js";
 
 // function displayProject(Project) {
@@ -14,10 +13,4 @@ import taskController from "./controller/taskController.js";
 //   tasksManagement.removeTask(Task);
 //   displayCurrentTask();
 // };
-//
-//
-// function createProject() {
-//   const projectName = domManagement.getProjectData();
-//   const newProject = new projectModel(projectName);
-// }
 taskController.addButtonFunc();
