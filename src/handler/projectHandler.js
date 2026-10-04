@@ -7,6 +7,7 @@ function addProject(Project) {
     }
   }
   projectList.push(Project);
+  return true;
 };
 
 function removeProject(Project) {

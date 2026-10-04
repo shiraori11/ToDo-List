@@ -1,4 +1,4 @@
-const createTaskButton = document.querySelector("#createTaskButton");
+const createTaskButton = document.querySelector("#create-task-button");
 const taskTitle = document.querySelector("#title");
 const taskDescription = document.querySelector("#description");
 const taskDueDate = document.querySelector("#duedate");

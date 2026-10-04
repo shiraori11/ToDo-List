@@ -6,7 +6,9 @@ import projectModel from "../model/projectModel.js";
 function createProject() {
   const projectName = domProjectHandler.getProjectData();
   const newProject = new projectModel(projectName);
-  projectHandler.addProject(newProject);
+  if (!projectHandler.addProject(newProject)) {
+    alert("Project already exists!");
+  };
 };
 
 function displayProject() {

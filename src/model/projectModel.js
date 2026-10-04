@@ -5,5 +5,10 @@ export default class Project {
   }
 
   addTaskToProject(Task) {
+    this.listOfProject.append(Task);
+  }
+
+  getTaskList() {
+    return this.listOfProject;
   }
 }
