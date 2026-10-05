@@ -7,5 +7,7 @@ export default function projectCard(Project) {
 
   projectCardDiv.append(projectTitle);
 
+  projectCardDiv.addEventListener("click", () => alert(Project.title));
+
   return projectCardDiv;
 };

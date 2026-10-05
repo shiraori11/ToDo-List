@@ -2,15 +2,10 @@ const projectForm = document.getElementById("create-project-form");
 const projectListContent = document.querySelector("#project-list");
 const projectName = document.getElementById("project-name");
 const projectSubmitButton = document.getElementById("create-project-button");
-const projectTaskCard = document.querySelector("project-card");
 
 function addCreateProjectButtonFunc(func) {
   projectSubmitButton.addEventListener("click", func);
 };
-
-function addTaskCardEvent(func) {
-  projectTaskCard.addEventListener("click", func);
-}
 
 function addProjectCard(projectCard) {
   projectListContent.appendChild(projectCard);
