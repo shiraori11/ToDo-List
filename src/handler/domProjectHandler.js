@@ -1,5 +1,5 @@
 const projectForm = document.getElementById("create-project-form");
-const projectListContent = document.querySelector("#project-list");
+const mainMenu = document.querySelector("#main-menu");
 const projectName = document.getElementById("project-name");
 const projectSubmitButton = document.getElementById("create-project-button");
 
@@ -8,19 +8,23 @@ function addCreateProjectButtonFunc(func) {
 };
 
 function addProjectCard(projectCard) {
-  projectListContent.appendChild(projectCard);
+  mainMenu.appendChild(projectCard);
 };
 
 function toggleProjectListVisibility() {
-  projectListContent.hidden = !projectListContent.hidden;
+  mainMenu.hidden = !mainMenu.hidden;
 };
+
+function navigateFromMainMenu(View) {
+  mainMenu.appendChild(View);
+}
 
 function getProjectData() {
   return projectName.value;
 };
 
 function resetProjectList() {
-  projectListContent.innerHTML = "";
+  mainMenu.innerHTML = "";
 }
 
 function resetProjectForm() {
@@ -32,6 +36,7 @@ export default {
   addProjectCard,
   getProjectData,
   toggleProjectListVisibility,
+  navigateFromMainMenu,
   resetProjectForm,
   resetProjectList
 };

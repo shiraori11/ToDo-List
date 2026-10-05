@@ -1,4 +1,4 @@
-export default function projectCard(Project) {
+export default function projectCard(Project, Func) {
   const projectCardDiv = document.createElement("div");
   projectCardDiv.classList.add("project-card");
 
@@ -7,7 +7,7 @@ export default function projectCard(Project) {
 
   projectCardDiv.append(projectTitle);
 
-  projectCardDiv.addEventListener("click", () => alert(Project.title));
+  projectCardDiv.addEventListener("click", () => {alert(Project.title); Func(Project) } );
 
   return projectCardDiv;
 };

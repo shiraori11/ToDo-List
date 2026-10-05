@@ -4,7 +4,7 @@ const taskDescription = document.querySelector("#description");
 const taskDueDate = document.querySelector("#duedate");
 const taskPriority = document.querySelector("#priority");
 const taskForm = document.getElementById("create-task-form");
-const taskListContent = document.querySelector("#task-list");
+const mainMenu = document.querySelector("#main-menu");
 
 function addCreateTaskButtonFunc(func) {
   createTaskButton.addEventListener("click", func);
@@ -24,16 +24,16 @@ function getTaskData() {
 };
 
 function addTaskCard(taskCard) {
-  taskListContent.appendChild(taskCard);
+  mainMenu.appendChild(taskCard);
 };
 
 function resetTaskItems() {
-  taskListContent.innerHTML = "";
+  mainMenu.innerHTML = "";
 };
 
-function toggleTaskListVisibility() {
-  taskListContent.hidden = !taskListContent.hidden;
-};
+// function toggleTaskListVisibility() {
+//   taskListContent.hidden = !taskListContent.hidden;
+// };
 
 export default {
   addCreateTaskButtonFunc,
@@ -41,5 +41,4 @@ export default {
   resetTaskDataInput,
   addTaskCard,
   resetTaskItems,
-  toggleTaskListVisibility,
 };
